@@ -5,7 +5,7 @@ public class InsuranceCustomerInput {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Collect customer information
+        // Collect customer information Updated
         System.out.println("Welcome to Insured Assurance!");
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
@@ -41,7 +41,7 @@ public class InsuranceCustomerInput {
                 System.exit(0);
         }
 
-        // Display collected information
+        // Display collected information Updated
         System.out.println("Thank you for providing your information!");
         System.out.println("Customer Name: " + name);
         System.out.println("Customer Age: " + age);
