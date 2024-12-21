@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class InsuranceCustomerInput {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Collect customer information
+        System.out.println("Welcome to Insured Assurance!");
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+        scanner.nextLine(); // Consume newline left-over
+
+        System.out.println("Select the type of insurance you are interested in:");
+        System.out.println("1. Home Insurance");
+        System.out.println("2. Health Insurance");
+        System.out.println("3. Car Insurance");
+        System.out.println("4. Life Insurance");
+        int insuranceType = scanner.nextInt();
+        scanner.nextLine(); // Consume newline left-over
+
+        String selectedInsurance = "";
+        switch (insuranceType) {
+            case 1:
+                selectedInsurance = "Home Insurance";
+                break;
+            case 2:
+                selectedInsurance = "Health Insurance";
+                break;
+            case 3:
+                selectedInsurance = "Car Insurance";
+                break;
+            case 4:
+                selectedInsurance = "Life Insurance";
+                break;
+            default:
+                System.out.println("Invalid choice. Exiting.");
+                System.exit(0);
+        }
+
+        // Display collected information
+        System.out.println("Thank you for providing your information!");
+        System.out.println("Customer Name: " + name);
+        System.out.println("Customer Age: " + age);
+        System.out.println("Selected Insurance: " + selectedInsurance);
+
+        scanner.close();
+    }
+}
